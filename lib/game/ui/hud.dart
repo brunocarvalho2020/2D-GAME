@@ -13,32 +13,10 @@ class Hud extends PositionComponent {
     final textComponent = TextComponent(
       text: 'HP: 100',
       textRenderer: TextPaint(
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 18,
-        ),
+        style: TextStyle(color: Colors.white, fontSize: 18),
       ),
-    )
-    ..anchor = Anchor.topLeft; // âncora para alinhar melhor no topo/esquerda
+    )..anchor = Anchor.topLeft; // âncora para alinhar melhor no topo/esquerda
 
     add(textComponent);
   }
-
-  // Adicione este método para mostrar instruções
-  void _drawControls(Canvas canvas) {
-    final textStyle = TextStyle(
-      color: Colors.white,
-      fontSize: 16,
-    );
-    
-    final textPainter = TextPainter(
-      text: TextSpan(
-        text: 'Esquerdo: Mover\nDireito: Atirar',
-        style: textStyle,
-      ),
-      textDirection: TextDirection.ltr,
-    )..layout();
-    
-    textPainter.paint(canvas, Offset(20, 20));
-  }
-  }
+}

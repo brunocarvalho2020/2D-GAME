@@ -8,7 +8,9 @@ class InfiniteBackground extends SpriteComponent with HasGameRef<FlameGame> {
     sprite = await gameRef.loadSprite('background.png');
 
     // Define o tamanho e a posição do fundo
-    size = gameRef.size * 1.5; // Ajusta o tamanho do fundo
+    // Define o tamanho exato da imagem (1024x1024)
+    size = Vector2(1024, 1024);
     position = Vector2.zero(); // Define a posição inicial como (0, 0)
+    anchor = Anchor.topLeft;
   }
 }
